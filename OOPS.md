@@ -127,6 +127,41 @@ Explanation- We created a private data member plane_number which can only be acc
 3. **View Level:** 
     Application programs hide details of data types and information for security purposes. This level is generally implemented with the help of GUI, and details that are meant for the user are shown. 
 
+
+* Abstraction can be achieved with either abstract classes or interfaces.
+
+
+### Example of Abstract class and method-
+
+```Java
+// Abstract class 
+// To access the abstract class, it must be inherited from another class.
+abstract class Animal {
+  // Abstract method (does not have a body)
+  public abstract void animalSound();
+  // Regular method
+  public void sleep() {
+    System.out.println("Zzz");
+  }
+}
+
+// Subclass (inherit from Animal)
+class Pig extends Animal {
+  public void animalSound() {
+    // The body of animalSound() is provided here
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Pig myPig = new Pig(); // Create a Pig object
+    myPig.animalSound();
+    myPig.sleep();
+  }
+}
+```
+
 -------
 
 ## **Inheritance**
@@ -240,6 +275,41 @@ class Cat extends Animal {
 | It provides fast execution as it is known at the compile time. | It provides slow execution as it is known at the run time.   |
 | It is less flexible as mainly all the things execute at the compile time. | It is more flexible as all the things execute at the run time. |
 
+
+For example,
+
+think of a superclass called Animal that has a method called animalSound(). Subclasses of Animals could be Pigs, Cats, Dogs, Birds - And they also have their own implementation of an animal sound (the pig oinks, and the cat meows, etc.):
+
+```Java
+class Animal {
+  public void animalSound() {
+    System.out.println("The animal makes a sound");
+  }
+}
+
+class Pig extends Animal {
+  public void animalSound() {
+    System.out.println("The pig says: wee wee");
+  }
+}
+
+class Dog extends Animal {
+  public void animalSound() {
+    System.out.println("The dog says: bow wow");
+  }
+}
+
+class Main {
+  public static void main(String[] args) {
+    Animal myAnimal = new Animal();  // Create a Animal object
+    Animal myPig = new Pig();  // Create a Pig object
+    Animal myDog = new Dog();  // Create a Dog object
+    myAnimal.animalSound();
+    myPig.animalSound();
+    myDog.animalSound();
+  }
+}
+```
 -----
 ## **Advantages of OOPs**
 
