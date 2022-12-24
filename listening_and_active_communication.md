@@ -38,7 +38,7 @@
 - Passive Communication
 - Aggressive Communication
 - Passive Aggressive Communication
-- Aggressive Communication
+- Assertive Communication
 
 **When do you switch to a Passive communication style in your day-to-day life?**
 
